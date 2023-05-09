@@ -1,4 +1,5 @@
-﻿using Shopee.Entities.Aggregates.ProductAggregate;
+﻿using Ardalis.Specification;
+using Shopee.Entities.Aggregates.ProductAggregate;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -9,6 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Exceptions\ProductNotFoundException.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Shopee.Application.Contracts\Shopee.Application.Contracts.csproj" />
     <ProjectReference Include="..\Shopee.Domain.Shared\Shopee.Domain.Shared.csproj" />
   </ItemGroup>
 
@@ -31,6 +36,10 @@
 
   <ItemGroup>
     <Folder Include="Products\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Exceptions\ProductNotFoundException.cs" />
   </ItemGroup>
 
 </Project>

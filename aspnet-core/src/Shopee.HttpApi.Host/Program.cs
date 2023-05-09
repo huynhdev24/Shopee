@@ -5,6 +5,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 using Serilog.Events;
+using Shopee.Extensions;
+using Shopee.Infrastructure.Middlewares;
 
 namespace Shopee;
 
@@ -32,9 +34,15 @@ public class Program
             builder.Host.AddAppSettingsSecretsJson()
                 .UseAutofac()
                 .UseSerilog();
+            builder.Services.AddDbContext(builder.Configuration);
+            builder.Services.AddServices();
+            builder.Services.AddMapster();
+            builder.Services.AddCustomerCors();
             await builder.AddApplicationAsync<ShopeeHttpApiHostModule>();
             var app = builder.Build();
             await app.InitializeApplicationAsync();
+            app.UseCustomCors();
+            app.UseMiddleware<GlobalExceptionHandler>();
             await app.RunAsync();
             return 0;
         }

@@ -1,4 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Shopee.Entities;
+using Shopee.Entities.Aggregates.CartAggregate;
+using Shopee.Entities.Aggregates.ProductAggregate;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
 using Volo.Abp.Data;
@@ -51,6 +54,8 @@ public class ShopeeDbContext :
     public DbSet<Tenant> Tenants { get; set; }
     public DbSet<TenantConnectionString> TenantConnectionStrings { get; set; }
 
+    
+
     #endregion
 
     public ShopeeDbContext(DbContextOptions<ShopeeDbContext> options)
@@ -82,5 +87,7 @@ public class ShopeeDbContext :
         //    b.ConfigureByConvention(); //auto configure for the base class props
         //    //...
         //});
+
+
     }
 }
