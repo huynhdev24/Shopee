@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Volo.Abp.Application.Dtos;
 
-namespace Shopee.Products
+namespace Shopee.Interfaces
 {
-    public class ProductVariantDTO
+    public interface IAggregateRoot
     {
-        public string Name { get; set; }
     }
 }

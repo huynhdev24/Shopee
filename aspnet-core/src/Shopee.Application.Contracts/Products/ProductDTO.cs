@@ -7,13 +7,14 @@ using Volo.Abp.Application.Dtos;
 
 namespace Shopee.Products
 {
-    public class ProductDto : EntityDto<Guid>
+    public class ProductDTO
     {
-        public string Brand { get; init; }
-        public string Model { get; init; }
-        public string Color { get; init; }
-        public string Gender { get; init; }
-        public string ImageBase { get; init; }
-        public decimal Price { get; init; }
+        public int Id { get; set; }
+        public string Brand { get; set; }
+        public string Model { get; set; }
+        public string Color { get; set; }
+        public string Gender { get; set; }
+        public string ImageBase { get; set; }
+        public decimal Price { get; set; }
     }
 }
