@@ -11,7 +11,7 @@ namespace Shopee.EntityFrameworkCore
 {
     public static class ShopeeDbContextSeeder
     {
-        public static async Task SeedAsync(ApplicationDbContext dbContext)
+        public static async Task SeedAsync(ShopeeDbContext dbContext)
         {
             if (dbContext.Database.IsSqlServer())
             {

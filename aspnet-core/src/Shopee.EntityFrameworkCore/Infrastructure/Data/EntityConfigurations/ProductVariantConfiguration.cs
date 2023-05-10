@@ -11,7 +11,7 @@ namespace Shopee.Infrastructure.Data.EntityConfigurations
 {
     public class ProductVariantConfiguration : IEntityTypeConfiguration<ProductVariant>
     {
-        public void Configure(EntityTypeBuilder<ProductVariant> builder)
+        public void Configure(EntityTypeBuilder<ProductVariant> builder)    
         {
             builder.HasKey(productColor => new { productColor.ProductId, productColor.ColorId });
             builder.ToTable("ProductColors");

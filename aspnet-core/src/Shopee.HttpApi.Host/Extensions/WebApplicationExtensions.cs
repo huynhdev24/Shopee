@@ -11,8 +11,8 @@ namespace Shopee.Extensions
         {
             using (var scope = app.Services.CreateScope())
             {
-                var applicationDbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-                await ShopeeDbContextSeeder.SeedAsync(applicationDbContext);
+                var shopeeDbContext = scope.ServiceProvider.GetRequiredService<ShopeeDbContext>();
+                await ShopeeDbContextSeeder.SeedAsync(shopeeDbContext);
             }
 
             return app;

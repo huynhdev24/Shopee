@@ -19,7 +19,6 @@ namespace Shopee.Entities.Aggregates.ProductAggregate
             ProductId = productId;
             ColorId = colorId;
         }
-
         public int ProductId { get; private set; }
         public Product Product { get; private set; }
         public int ColorId { get; private set; }
